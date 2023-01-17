@@ -1,5 +1,9 @@
 import React, { FC, ReactNode } from 'react';
 
+// Reset CSS
+import '@styles/reset.css';
+
+// Types
 type LayoutProps = {
   children: ReactNode;
 };
