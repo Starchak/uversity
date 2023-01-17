@@ -1,13 +1,27 @@
 import React, { FC } from 'react';
 
-import { Header, Footer } from '@components';
+import {
+  AboutUs,
+  ContactUs,
+  EachStudent,
+  HowWeWork,
+  Reviews,
+  Slider,
+  WeOffer,
+  WhyUs
+} from '@components/Home';
 
 const Home: FC = () => {
   return (
     <div>
-      <Header />
-      Home
-      <Footer />
+      <Slider />
+      <AboutUs />
+      <WeOffer />
+      <WhyUs />
+      <EachStudent />
+      <HowWeWork />
+      <Reviews />
+      <ContactUs />
     </div>
   );
 };

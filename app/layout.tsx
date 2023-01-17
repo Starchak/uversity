@@ -1,5 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 
+import { Header, Footer } from '@components';
+
 // Reset CSS
 import '@styles/reset.css';
 
@@ -14,7 +16,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <head>
         <title>Uversity</title>
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 };
