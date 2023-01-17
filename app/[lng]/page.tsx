@@ -11,7 +11,15 @@ import {
   WhyUs
 } from '@components/Home';
 
-const Home: FC = () => {
+import { useTranslation } from '../i18n';
+
+type HomeProps = {
+  params: Params;
+};
+
+const Home = async ({ params: { lng } }: HomeProps) => {
+  const { t } = await useTranslation(lng, 'header');
+
   return (
     <div>
       <Slider />
