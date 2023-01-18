@@ -2,4 +2,20 @@
 
 .button {
   background: $orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $dark-orange;
+    border-color: $dark-orange;
+  }
+
+  &:active {
+    background: $darker-orange;
+    border-color: $darker-orange;
+  }
 }
