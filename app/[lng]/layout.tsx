@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { dir } from 'i18next';
 
 import { languages } from '../i18n/settings';
@@ -9,6 +9,7 @@ import { Header, Footer } from '@components';
 
 // Reset CSS
 import '@styles/reset.css';
+import '@styles/global.scss';
 
 // Types
 type RootLayoutProps = {

@@ -1,5 +1,11 @@
 @import '@styles/variables';
 
 .header {
-  background: $red;
+  display: flex;
+  height: 9.7rem;
+  width: 100%;
+}
+
+.header_content {
+  border-bottom: 0.3rem solid $white;
 }
