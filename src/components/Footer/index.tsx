@@ -9,7 +9,7 @@ const Footer: FC = () => {
     <footer>
       <div className={styles.container}>
         <div className={styles.social_media_1}>
-          <div className={styles.upper_text}>Follow Us</div>
+          <div className={styles.upper_text}>Ми завжди поруч</div>
           <div className={styles.social_media_icons}>
             <div>1</div>
             <div>2</div>
@@ -18,15 +18,15 @@ const Footer: FC = () => {
         </div>
         <div className={styles.social_between_box}>
           <div className={styles.logo}></div>
-          <div className={styles.title}></div>
+          <div className={styles.title}>Працюємо з усіма містами України</div>
           <div className={styles.contact_phones}>
-            <div></div>
-            <div></div>
+            <div>+38 097 551 33 88</div>
+            <div>+38 097 551 33 88</div>
           </div>
-          <div className={styles.contact_email}></div>
+          <div className={styles.contact_email}>hello@uversity.com.ua</div>
         </div>
         <div className={styles.social_media_2}>
-          <div className={styles.upper_text}>Follow Us</div>
+          <div className={styles.upper_text}>Слідкуйте за нами</div>
           <div className={styles.social_media_icons}>
             <div>1</div>
             <div>2</div>
@@ -54,8 +54,10 @@ const Footer: FC = () => {
             </ul>
           </nav>
         </div>
-        <div className={styles.privacy_policy_1}></div>
-        <div className={styles.privacy_policy_2}></div>
+        <div className={styles.privacy_policy_1}>
+          © 2021 Uversity. Всі права захищені.
+        </div>
+        <div className={styles.privacy_policy_2}>Політика конфіденційності</div>
       </div>
     </footer>
   );

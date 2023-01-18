@@ -1,5 +1,39 @@
 @import '@styles/variables';
 
 .why_us {
-  background: none;
+  background: rgb(230, 208, 252);
+  height: 37rem;
+  border: solid;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  margin-top: 10rem;
+  border: solid;
+  height: 4rem;
+  width: 56.3rem;
+}
+
+.subtitle {
+  display: flex;
+  padding-left: 30rem;
+  padding-right: 30rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subtitle div {
+  margin-right: 1rem;
+  margin-bottom: 1.6rem;
+  order: 1;
+  flex-direction: column;
+  display: flex;
+  border: solid;
+  height: 2.8rem;
 }

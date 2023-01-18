@@ -1,5 +1,39 @@
 @import '@styles/variables';
 
 .about_us {
+  display: flex;
   background: none;
+  border: solid;
+  height: 111.6rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grey_block {
+  position: relative;
+  flex: 1 1 auto;
+  width: auto;
+  height: auto;
+  border: solid;
+}
+
+.white_block {
+  position: relative;
+  flex: 2 1 auto;
+  width: auto;
+  height: auto;
+  border: solid;
+}
+
+.picture {
+  position: absolute;
+  width: 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: dotted;
+  height: 80rem;
+  margin-top: 12rem;
+  margin-left: 22rem;
 }

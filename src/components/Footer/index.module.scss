@@ -37,10 +37,13 @@
 }
 
 .title {
+  display: flex;
+  justify-content: center;
   border: solid;
   width: 60%;
   height: 30px;
   margin-top: 64px;
+  align-items: center;
 }
 
 .contact_phones {
@@ -53,6 +56,12 @@
   height: 35px;
 }
 
+.contact_phones div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact_email {
   display: flex;
   flex-wrap: nowrap;
@@ -62,6 +71,7 @@
   width: 40%;
   height: 35px;
   border: solid;
+  align-items: center;
 }
 
 .contact_phones div {
@@ -86,15 +96,21 @@
 .navigation {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .navigation li {
   display: inline;
   padding: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .privacy_policy_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: solid;
   width: auto;
   flex-grow: 1;
@@ -103,6 +119,9 @@
 }
 
 .privacy_policy_2 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   border: solid;
   flex-grow: 1;
   height: 79.5px;
@@ -128,6 +147,8 @@
 }
 
 .social_media_icons div {
+  border-radius: 5rem;
+  border-width: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +156,6 @@
   height: 50px;
   column-gap: 10px;
   grid-column-gap: 2rem;
-  border: solid;
+  border-style: solid;
   grid-template-rows: repeat(3, 12fr);
 }
