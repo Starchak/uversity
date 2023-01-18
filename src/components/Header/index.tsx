@@ -11,6 +11,10 @@ const Header: FC<HeaderProps> = ({ t }) => {
     <div className={styles.header}>
       <ul>
         <li>{t('menu_item_1')}</li>
+        <li>{t('menu_item_2')}</li>
+        <li>{t('menu_item_3')}</li>
+        <li>{t('menu_item_4')}</li>
+        <li>{t('menu_item_5')}</li>
       </ul>
     </div>
   );
