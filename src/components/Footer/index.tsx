@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 
+import { CircleIcon } from '@styled/CircleIcon';
+
 import styles from './index.module.scss';
 
 const Footer: FC = () => {
