@@ -21,7 +21,9 @@ export function middleware(req: any) {
   // Redirect if lng in path is not supported
   if (
     !languages.some(loc => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
-    !req.nextUrl.pathname.startsWith('/_next')
+    !req.nextUrl.pathname.startsWith('/_next') &&
+    !req.nextUrl.pathname.endsWith('.png') &&
+    !req.nextUrl.pathname.endsWith('.svg')
   ) {
     return NextResponse.redirect(
       new URL(`/${lng}${req.nextUrl.pathname}`, req.url)

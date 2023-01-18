@@ -2,8 +2,13 @@ import React, { FC } from 'react';
 
 import styles from './index.module.scss';
 
-const Button: FC = () => {
-  return <div className={styles.button}>Button</div>;
+type ButtonProps = {
+  className?: string;
+  children: string;
+};
+
+const Button: FC<ButtonProps> = ({ className, children }) => {
+  return <div className={[className, styles.button].join(' ')}>{children}</div>;
 };
 
 export { Button };
