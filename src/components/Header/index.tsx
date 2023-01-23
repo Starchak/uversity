@@ -12,6 +12,9 @@ import { useTranslation } from '@i18n/client';
 // Helpers
 import useOutsideClick from '@helpers/useOutsideClick';
 
+// SVG
+import ArrowSVG from '../../../public/arrow.svg';
+
 import styles from './index.module.scss';
 
 type HeaderProps = {
@@ -56,11 +59,11 @@ const Header: FC<HeaderProps> = ({ lng }) => {
           <div className={styles.nav_lang} ref={ref_lng}>
             <span onClick={toggleLangMenu}>
               <p>Укр</p>
-              <Image
-                src="/down_arrow.svg"
-                alt="down_arrow"
-                width={9.9}
-                height={5.66}
+              <ArrowSVG
+                fill={isBgWhite ? '#111' : 'white'}
+                className={`${styles.arrow} ${
+                  isLangMenuOpen ? styles.arrow_open : ''
+                }`}
               />
             </span>
             <MenuSelect className={styles.lang_select} isOpen={isLangMenuOpen}>
@@ -94,12 +97,7 @@ const Header: FC<HeaderProps> = ({ lng }) => {
           <div className={styles.nav_contact}>
             <span>
               <p>{t('number_kyivstar')}</p>
-              <Image
-                src="/down_arrow.svg"
-                alt="down_arrow"
-                width={9.9}
-                height={5.66}
-              />
+              <ArrowSVG fill={isBgWhite ? '#111' : 'white'} />
             </span>
           </div>
         </div>
