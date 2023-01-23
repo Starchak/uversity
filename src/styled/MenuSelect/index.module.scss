@@ -1,0 +1,20 @@
+@import '@styles/variables';
+
+.menu_select {
+  background: $white;
+  color: $black;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close {
+  opacity: 0;
+  visibility: hidden;
+}

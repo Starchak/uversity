@@ -94,3 +94,23 @@ h1 {
 h2 {
   font-size: $large;
 }
+
+.link {
+  text-decoration: none;
+  color: $black;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid $orange;
+  }
+}
+
+.link_active {
+  border-bottom: 2px solid $orange;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

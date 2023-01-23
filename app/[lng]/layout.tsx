@@ -1,8 +1,7 @@
 import React, { ReactNode } from 'react';
 import { dir } from 'i18next';
 
-import { languages } from '../i18n/settings';
-import { useTranslation } from '../i18n';
+import { languages } from '@i18n/settings';
 
 // Components
 import { Header, Footer } from '@components';
@@ -22,15 +21,13 @@ export async function generateStaticParams() {
 }
 
 const RootLayout = async ({ children, params: { lng } }: RootLayoutProps) => {
-  const { t } = await useTranslation(lng, 'header');
-
   return (
     <html lang={lng} dir={dir(lng)}>
       <head>
         <title>Uversity</title>
       </head>
       <body>
-        <Header t={t} />
+        <Header lng={lng} />
         {children}
         <Footer />
       </body>
