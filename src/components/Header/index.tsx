@@ -26,6 +26,15 @@ const Header: FC<HeaderProps> = ({ lng }) => {
 
   const [isBgWhite, setIsBgWhite] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
+
+  const refLng = useOutsideClick(() => {
+    setIsLangMenuOpen(false);
+  });
+
+  const refContacts = useOutsideClick(() => {
+    setIsContactMenuOpen(false);
+  });
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -39,9 +48,9 @@ const Header: FC<HeaderProps> = ({ lng }) => {
     setIsLangMenuOpen(!isLangMenuOpen);
   };
 
-  const ref_lng = useOutsideClick(() => {
-    setIsLangMenuOpen(false);
-  });
+  const toggleContactMenu = () => {
+    setIsContactMenuOpen(!isContactMenuOpen);
+  };
 
   return (
     <header
@@ -49,14 +58,26 @@ const Header: FC<HeaderProps> = ({ lng }) => {
     >
       <div className={styles.header_content}>
         <div className={styles.logo_container}>
-          {isBgWhite ? (
-            <Image src="/logo_orange.png" alt="logo" width={105} height={105} />
-          ) : (
-            <Image src="/logo_white.png" alt="logo" width={105} height={105} />
-          )}
+          <Link href={`/${lng}`}>
+            {isBgWhite ? (
+              <Image
+                src="/logo_orange.png"
+                alt="logo"
+                width={105}
+                height={105}
+              />
+            ) : (
+              <Image
+                src="/logo_white.png"
+                alt="logo"
+                width={105}
+                height={105}
+              />
+            )}
+          </Link>
         </div>
         <div className={styles.nav_container}>
-          <div className={styles.nav_lang} ref={ref_lng}>
+          <div className={styles.nav_lang} ref={refLng}>
             <span onClick={toggleLangMenu}>
               <p>Укр</p>
               <ArrowSVG
@@ -114,11 +135,66 @@ const Header: FC<HeaderProps> = ({ lng }) => {
               </li>
             </ul>
           </nav>
-          <div className={styles.nav_contact}>
-            <span>
+          <div className={styles.nav_contact} ref={refContacts}>
+            <span onClick={toggleContactMenu}>
               <p>{t('number_kyivstar')}</p>
-              <ArrowSVG fill={isBgWhite ? '#111' : 'white'} />
+              <ArrowSVG
+                fill={isBgWhite ? '#111' : 'white'}
+                className={`${styles.arrow} ${
+                  isContactMenuOpen ? styles.arrow_open : ''
+                }`}
+              />
             </span>
+            <MenuSelect
+              className={styles.contacts_select}
+              isOpen={isContactMenuOpen}
+            >
+              <div>
+                <p className={styles.subtitle}>Kyivstar</p>
+                <a
+                  href={`tel:${t('number_kyivstar')}`}
+                  className={styles.contact_title}
+                >
+                  {t('number_kyivstar')}
+                </a>
+                <p className={styles.subtitle}>Lifecell</p>
+                <a
+                  href={`tel:${t('number_lifecell')}`}
+                  className={styles.contact_title}
+                >
+                  {t('number_lifecell')}
+                </a>
+                <div>
+                  <p className={styles.subtitle}>{t('contact_we_close')}</p>
+                  <div className={styles.contact_btns}>
+                    <a href="#">
+                      <Image
+                        src="/meta_circle.png"
+                        alt="Messenger"
+                        width={50}
+                        height={50}
+                      />
+                    </a>
+                    <a href="#">
+                      <Image
+                        src="/tg_circle.png"
+                        alt="Telegram"
+                        width={50}
+                        height={50}
+                      />
+                    </a>
+                    <a href="#">
+                      <Image
+                        src="/viber_circle.png"
+                        alt="Viber"
+                        width={50}
+                        height={50}
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </MenuSelect>
           </div>
         </div>
       </div>

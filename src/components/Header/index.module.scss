@@ -115,6 +115,16 @@
   }
 }
 
+.contacts_select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24rem;
+  height: 24rem;
+  bottom: -24rem;
+  right: 2rem;
+}
+
 .arrow {
   transform: rotate(0deg);
   transition: all 0.2s ease-in-out;
@@ -123,4 +133,26 @@
 .arrow_open {
   transform: rotate(180deg);
   fill: $orange;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  color: rgba($color: $black, $alpha: 0.5);
+  line-height: 2rem;
+}
+
+.contact_title {
+  line-height: 3.5rem;
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contact_btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
 }
