@@ -1,65 +1,66 @@
 @import '@styles/variables';
 
-.about_us {
-  display: flex;
+.container {
   position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
   height: 90vh;
 }
 
-.bg {
+.grey_block {
+  position: relative;
+  flex: 1;
   display: flex;
-  width: 100%;
+  border: 1px solid black;
+  background-color: $light-grey;
+}
 
-  .bg_left {
-    flex: 1;
-    background: $light-grey;
-  }
-
-  .bg_right {
-    flex: 2;
-    background: $white;
-  }
+.white_block {
+  position: relative;
+  flex: 2;
+  display: flex;
+  border: 1px solid black;
 }
 
 .content {
-  position: absolute;
-  border: 1px solid red;
-  width: 80%;
-  height: 80%;
-  left: 10%;
-  top: 10%;
   display: flex;
+  height: 70%;
+  position: absolute;
   flex-direction: row;
-  .content_left {
-    flex: 1;
-    height: 100%;
-    background: red;
-  }
+  border: 1px solid black;
 
-  .content_right {
-    flex: 2;
-    height: 100%;
-    background: blue;
-  }
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-// .picture {
-//   position: absolute;
-//   width: 40%;
-//   display: flex;
-//   border: dotted;
-//   height: 80rem;
-//   margin-top: 12rem;
-//   margin-left: 22rem;
-// }
+.picture {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  flex: 3;
+  border: 1px solid black;
+}
 
-// .description {
-//   margin-top: auto;
-//   position: absolute;
-//   bottom: -6rem;
-//   left: -6rem;
-//   width: 40rem;
-//   display: flex;
-//   border: dotted;
-//   height: 29rem;
-// }
+.info_block {
+  width: 25rem;
+  height: 15rem;
+  border: 1px solid black;
+  bottom: -4rem;
+  left: -0.8rem;
+  position: absolute;
+  background-color: $orange;
+  padding: 1rem;
+}
+
+.text {
+  height: 100%;
+  flex: 4;
+  border: 1px solid black;
+}
