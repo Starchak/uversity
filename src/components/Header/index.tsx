@@ -197,8 +197,10 @@ const Header: FC<HeaderProps> = ({ lng }) => {
             </MenuSelect>
           </div>
         </div>
+        <div className={styles.btn_container}>
+          <Button className={styles.button}>{t('header_button')}</Button>
+        </div>
       </div>
-      <Button className={styles.button}>{t('header_button')}</Button>
     </header>
   );
 };

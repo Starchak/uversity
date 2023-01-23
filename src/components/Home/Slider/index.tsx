@@ -12,7 +12,11 @@ const Slider: FC = () => {
         fill={true}
         className={styles.image_container}
       />
-      <div className={styles.slider_content}></div>
+      <div className={styles.slider_content}>
+        <div className={styles.left} />
+        <div className={styles.middle}></div>
+        <div className={styles.right}></div>
+      </div>
     </section>
   );
 };

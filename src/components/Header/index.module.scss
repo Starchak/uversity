@@ -30,7 +30,7 @@
 
 .header_content {
   border-bottom: 0.3rem solid $white;
-  width: calc(100% - 22rem);
+  width: 100%;
   display: flex;
 
   nav {
@@ -48,6 +48,7 @@
 }
 
 .nav_container {
+  flex: 7;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -85,7 +86,7 @@
 }
 
 .logo_container {
-  width: 22rem;
+  flex: 1;
   height: 100%;
   display: flex;
   align-items: center;
@@ -93,10 +94,19 @@
   border-right: 0.1rem solid $line-color;
 }
 
+.btn_container {
+  flex: 1;
+  position: relative;
+}
+
 .button {
-  width: 22rem;
+  height: 100%;
+  width: 100%;
   color: $white;
   border-bottom: 0.3rem solid $orange;
+  border-left: 1px solid $orange;
+  position: absolute;
+  left: -1px;
 }
 
 .lang_select {
