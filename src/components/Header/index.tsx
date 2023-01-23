@@ -1,5 +1,5 @@
 'use client';
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -21,7 +21,16 @@ type HeaderProps = {
 const Header: FC<HeaderProps> = ({ lng }) => {
   const { t } = useTranslation(lng, 'header');
 
+  const [isBgWhite, setIsBgWhite] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', () =>
+        setIsBgWhite(window.pageYOffset > 800)
+      );
+    }
+  }, []);
 
   const toggleLangMenu = () => {
     setIsLangMenuOpen(!isLangMenuOpen);
@@ -32,10 +41,16 @@ const Header: FC<HeaderProps> = ({ lng }) => {
   });
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${isBgWhite ? styles.header_white : ''}`}
+    >
       <div className={styles.header_content}>
         <div className={styles.logo_container}>
-          <Image src="/logo_white.png" alt="logo" width={105} height={105} />
+          {isBgWhite ? (
+            <Image src="/logo_orange.png" alt="logo" width={105} height={105} />
+          ) : (
+            <Image src="/logo_white.png" alt="logo" width={105} height={105} />
+          )}
         </div>
         <div className={styles.nav_container}>
           <div className={styles.nav_lang} ref={ref_lng}>

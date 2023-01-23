@@ -8,6 +8,16 @@
   z-index: 100;
   color: $white;
   font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.header_white {
+  background: $white;
+  color: $black;
+
+  .header_content {
+    border-bottom: 0.3rem solid $orange;
+  }
 }
 
 .header_content {
@@ -77,6 +87,7 @@
 
 .button {
   width: 22rem;
+  color: $white;
   border-bottom: 0.3rem solid $orange;
 }
 
