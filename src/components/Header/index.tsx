@@ -87,11 +87,31 @@ const Header: FC<HeaderProps> = ({ lng }) => {
           </div>
           <nav>
             <ul>
-              <li>{t('menu_item_1')}</li>
-              <li>{t('menu_item_2')}</li>
-              <li>{t('menu_item_3')}</li>
-              <li>{t('menu_item_4')}</li>
-              <li>{t('menu_item_5')}</li>
+              <li>
+                <Link href={`${lng}/#`} className={`link ${styles.nav_link}`}>
+                  {t('menu_item_1')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${lng}/#`} className={`link ${styles.nav_link}`}>
+                  {t('menu_item_2')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${lng}/#`} className={`link ${styles.nav_link}`}>
+                  {t('menu_item_3')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${lng}/#`} className={`link ${styles.nav_link}`}>
+                  {t('menu_item_4')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${lng}/#`} className={`link ${styles.nav_link}`}>
+                  {t('menu_item_5')}
+                </Link>
+              </li>
             </ul>
           </nav>
           <div className={styles.nav_contact}>
