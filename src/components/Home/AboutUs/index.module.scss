@@ -2,37 +2,45 @@
 
 .about_us {
   display: flex;
-  background: none;
-  border: solid;
-  height: 111.6rem;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.grey_block {
   position: relative;
-  flex: 1 1 auto;
-  width: auto;
-  height: auto;
-  border: solid;
+  height: 90vh;
 }
 
-.white_block {
-  position: relative;
-  flex: 2 1 auto;
-  width: auto;
-  height: auto;
-  border: solid;
-}
-
-.overlay_box {
-  position: absolute;
-  flex: 3;
-  width: auto;
+.bg {
   display: flex;
-  border: dotted;
-  height: 80rem;
-  margin-top: 12rem;
+  width: 100%;
+
+  .bg_left {
+    flex: 1;
+    background: $light-grey;
+  }
+
+  .bg_right {
+    flex: 2;
+    background: $white;
+  }
+}
+
+.content {
+  position: absolute;
+  border: 1px solid red;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  display: flex;
+  flex-direction: row;
+  .content_left {
+    flex: 1;
+    height: 100%;
+    background: red;
+  }
+
+  .content_right {
+    flex: 2;
+    height: 100%;
+    background: blue;
+  }
 }
 
 // .picture {

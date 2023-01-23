@@ -6,9 +6,12 @@ import styles from './index.module.scss';
 const Slider: FC = () => {
   return (
     <section className={styles.slider}>
-      <div className={styles.image_container}>
-        <Image src="/bg_home_slider.png" alt="Slider Graphic" fill={true} />
-      </div>
+      <Image
+        src="/bg_home_slider.png"
+        alt="Slider Graphic"
+        fill={true}
+        className={styles.image_container}
+      />
       <div className={styles.slider_content}></div>
     </section>
   );

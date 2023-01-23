@@ -41,6 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   p {
     margin-right: 0.6rem;
@@ -71,10 +72,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid $line-color;
+  border-right: 0.1rem solid $line-color;
 }
 
 .button {
   width: 22rem;
-  border-bottom: 3px solid $orange;
+  border-bottom: 0.3rem solid $orange;
+}
+
+.lang_select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 4rem;
+  bottom: -11rem;
+  right: -6rem;
+  div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 6rem;
+  }
 }

@@ -11,7 +11,7 @@ import {
   WhyUs
 } from '@components/Home';
 
-import { useTranslation } from '../i18n';
+import { useTranslation } from '@i18n';
 
 type HomeProps = {
   params: Params;
