@@ -26,7 +26,7 @@ const Slider: FC<SliderProps> = ({ lng }) => {
         <div className={styles.left} />
         <div className={styles.middle}>
           <div className={styles.middle_line} />
-          <h1>{t('slider_heading')}</h1>
+          <h1 className={styles.title}>{t('slider_heading')}</h1>
         </div>
         <div className={styles.right}></div>
       </div>
