@@ -12,6 +12,11 @@
 
   .nav_link {
     color: $white;
+
+    @media (max-width: 1430px) {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
   }
 }
 
@@ -43,6 +48,12 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+
+      li {
+        @media (max-width: 1430px) {
+          line-height: 1.6rem;
+        }
+      }
     }
   }
 }
@@ -74,6 +85,12 @@
     border-bottom: 0.3rem solid transparent;
     position: relative;
     top: 0.3rem;
+
+    @media (max-width: 1430px) {
+      p {
+        font-size: 1.6rem;
+      }
+    }
 
     &:hover {
       border-bottom-color: $orange;
@@ -107,6 +124,11 @@
   border-left: 1px solid $orange;
   position: absolute;
   left: -1px;
+
+  @media (max-width: 1525px) {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
 }
 
 .lang_select {
