@@ -5,7 +5,9 @@ import styles from './index.module.scss';
 const WhyUs: FC = () => {
   return (
     <div className={styles.why_us}>
-      <div className={styles.title}>Чому обирають Uversity?</div>
+      <div className={styles.title}>
+        <h2>Чому обирають Uversity?</h2>
+      </div>
       <div className={styles.subtitle}>
         <div> Ми допоможемо вступити у виші будь-якої країни світу, </div>
         <div> Подамо на можливі стипендії та знижки,</div>

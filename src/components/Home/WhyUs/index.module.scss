@@ -1,9 +1,8 @@
 @import '@styles/variables';
 
 .why_us {
-  background: rgb(230, 208, 252);
   height: 37rem;
-  border: solid;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -13,9 +12,9 @@
   align-items: center;
   justify-content: center;
   display: flex;
-
+  color: $orange;
   margin-top: 10rem;
-  border: solid;
+
   height: 4rem;
   width: 56.3rem;
 }
@@ -34,6 +33,5 @@
   order: 1;
   flex-direction: column;
   display: flex;
-  border: solid;
   height: 2.8rem;
 }
