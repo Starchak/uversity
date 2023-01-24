@@ -12,6 +12,11 @@
 
   .nav_link {
     color: $white;
+
+    @media (max-width: 1430px) {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
   }
 }
 
@@ -30,7 +35,7 @@
 
 .header_content {
   border-bottom: 0.3rem solid $white;
-  width: calc(100% - 22rem);
+  width: 100%;
   display: flex;
 
   nav {
@@ -43,11 +48,18 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+
+      li {
+        @media (max-width: 1430px) {
+          line-height: 1.6rem;
+        }
+      }
     }
   }
 }
 
 .nav_container {
+  flex: 7;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -74,6 +86,12 @@
     position: relative;
     top: 0.3rem;
 
+    @media (max-width: 1430px) {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
     &:hover {
       border-bottom-color: $orange;
     }
@@ -85,7 +103,7 @@
 }
 
 .logo_container {
-  width: 22rem;
+  flex: 1;
   height: 100%;
   display: flex;
   align-items: center;
@@ -93,10 +111,24 @@
   border-right: 0.1rem solid $line-color;
 }
 
+.btn_container {
+  flex: 1;
+  position: relative;
+}
+
 .button {
-  width: 22rem;
+  height: 100%;
+  width: 100%;
   color: $white;
   border-bottom: 0.3rem solid $orange;
+  border-left: 1px solid $orange;
+  position: absolute;
+  left: -1px;
+
+  @media (max-width: 1525px) {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
 }
 
 .lang_select {
@@ -115,6 +147,16 @@
   }
 }
 
+.contacts_select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24rem;
+  height: 24rem;
+  bottom: -24rem;
+  right: 2rem;
+}
+
 .arrow {
   transform: rotate(0deg);
   transition: all 0.2s ease-in-out;
@@ -123,4 +165,26 @@
 .arrow_open {
   transform: rotate(180deg);
   fill: $orange;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  color: rgba($color: $black, $alpha: 0.5);
+  line-height: 2rem;
+}
+
+.contact_title {
+  line-height: 3.5rem;
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contact_btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
 }

@@ -46,6 +46,14 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'YesevaOne';
+  src: url('../public/fonts/YesevaOne-Regular.ttf');
+  src: url('../public/fonts/YesevaOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 // Apply rules
 div,
 span,
@@ -83,16 +91,21 @@ td,
 footer,
 header,
 nav {
-  font-size: $regular;
   font-family: 'Gilroy', sans-serif;
+  font-size: $regular;
+  line-height: 3.5rem;
 }
 
 h1 {
+  font-family: 'YesevaOne', serif;
   font-size: $headline;
+  line-height: 8rem;
 }
 
 h2 {
+  font-family: 'YesevaOne', serif;
   font-size: $large;
+  line-height: 4rem;
 }
 
 .link {
