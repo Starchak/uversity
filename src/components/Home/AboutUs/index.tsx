@@ -1,8 +1,19 @@
+'use client';
 import React, { FC } from 'react';
 import Image from 'next/image';
+
+// Translation
+import { useTranslation } from '@i18n/client';
+
 import styles from './index.module.scss';
 
-const AboutUs: FC = () => {
+type AboutUsProps = {
+  lng: string;
+};
+
+const AboutUs: FC<AboutUsProps> = ({ lng }) => {
+  const { t } = useTranslation(lng, 'home');
+
   return (
     <div className={styles.container}>
       <div className={styles.grey_block}></div>

@@ -27,9 +27,20 @@
 
 .middle {
   flex: 7;
+  position: relative;
 }
 
 .right {
   flex: 1;
   border-left: 1px solid $line-color;
+}
+
+.middle_line {
+  width: 1px;
+  height: calc(100% - 9.7rem);
+  background-color: $line-color;
+  position: absolute;
+  left: 50%;
+  top: 9.7rem;
+  transform: translate(-50%, 0);
 }
