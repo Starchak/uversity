@@ -30,7 +30,6 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  padding: 12rem;
 }
 
 .right {
@@ -51,4 +50,5 @@
 .title {
   color: $white;
   width: 85%;
+  margin: 12rem;
 }
