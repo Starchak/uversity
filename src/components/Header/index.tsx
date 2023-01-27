@@ -8,8 +8,6 @@ import { MobileHeader } from './MobileHeader';
 // Helpers
 import useWindowDimensions from '@helpers/useWindowDimensions';
 
-import styles from './index.module.scss';
-
 type HeaderProps = {
   lng: string;
 };
