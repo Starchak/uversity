@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import {
   AboutUs,
@@ -22,14 +22,16 @@ const Home = async ({ params: { lng } }: HomeProps) => {
 
   return (
     <div>
-      <Slider lng={lng} />
-      <AboutUs lng={lng} />
-      <WeOffer lng={lng} />
-      <WhyUs lng={lng} />
-      <EachStudent lng={lng} />
-      <HowWeWork lng={lng} />
-      <Reviews lng={lng} />
-      <ContactUs lng={lng} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Slider lng={lng} />
+        <AboutUs lng={lng} />
+        <WeOffer lng={lng} />
+        <WhyUs lng={lng} />
+        <EachStudent lng={lng} />
+        <HowWeWork lng={lng} />
+        <Reviews lng={lng} />
+        <ContactUs lng={lng} />
+      </Suspense>
     </div>
   );
 };
