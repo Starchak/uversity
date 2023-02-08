@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 
+// Translation
+import { useTranslation } from '@i18n/client';
+
 import styles from './index.module.scss';
 
 type Program = {
@@ -14,9 +17,12 @@ type Program = {
 
 type InteractiveBlockProps = {
   program: Program;
+  lng: string;
 };
 
-const InteractiveBlock: FC<InteractiveBlockProps> = ({ program }) => {
+const InteractiveBlock: FC<InteractiveBlockProps> = ({ program, lng }) => {
+  const { t } = useTranslation(lng, 'programs');
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -25,11 +31,15 @@ const InteractiveBlock: FC<InteractiveBlockProps> = ({ program }) => {
             className={styles.dot}
             style={{ background: program.color }}
           ></div>
-          <p className={styles.program_number}>{`Програма ${program.id}`}</p>
+          <p className={styles.program_number}>{`${t('program_word')} ${
+            program.id
+          }`}</p>
           <div></div>
         </div>
         <div className={styles.card_right}>
-          <p></p>
+          <p className={styles.title}>{t(program.title)}</p>
+          <div className={styles.countries}></div>
+          <p className={styles.description}>{t(program.description)}</p>
         </div>
       </div>
       <div className={styles.img}></div>

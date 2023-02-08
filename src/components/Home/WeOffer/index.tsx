@@ -62,12 +62,12 @@ const WeOffer: FC<WeOfferProps> = ({ lng }) => {
       <div className={styles.content}>
         <div className={styles.content_left}>
           {oddPrograms.map(program => (
-            <InteractiveBlock program={program} key={program.id} />
+            <InteractiveBlock program={program} key={program.id} lng={lng} />
           ))}
         </div>
         <div className={styles.content_right}>
           {evenPrograms.map(program => (
-            <InteractiveBlock program={program} key={program.id} />
+            <InteractiveBlock program={program} key={program.id} lng={lng} />
           ))}
         </div>
       </div>

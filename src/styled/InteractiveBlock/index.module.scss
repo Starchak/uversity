@@ -1,7 +1,7 @@
 @import '@styles/variables';
 
 .container {
-  height: 46rem;
+  height: 36rem;
   width: calc(100% - 3.5rem);
   margin: 5rem 3.5rem 5rem 0;
 }
@@ -26,19 +26,33 @@
     width: 1.2rem;
     height: 1.2rem;
     border-radius: 50%;
-    margin-top: 4.4rem;
+    margin-top: 3.6rem;
   }
 
   .program_number {
     transform: rotate(-90deg);
     white-space: nowrap;
     position: absolute;
-    bottom: 8rem;
+    bottom: 6rem;
     opacity: 0.5;
     font-size: $small;
+    font-weight: 300;
   }
 }
 
 .card_right {
   flex: 6;
+
+  .title {
+    margin-top: 3.3rem;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: $small;
+    font-weight: 300;
+    width: 80%;
+    margin-top: 2.5rem;
+    line-height: 2.6rem;
+  }
 }
