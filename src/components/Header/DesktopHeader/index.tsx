@@ -37,6 +37,7 @@ const DesktopHeader: FC<DesktopHeaderProps> = ({ lng }) => {
       window.addEventListener('scroll', () =>
         setIsBgWhite(window.pageYOffset > 800)
       );
+      setIsBgWhite(window.pageYOffset > 800);
     }
   }, []);
 
