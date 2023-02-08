@@ -1,5 +1,23 @@
 @import '@styles/variables';
 
 .we_offer {
-  background: none;
+  background: $light-grey;
+  padding: 6rem 26rem;
+
+  .title {
+    word-spacing: 100vw;
+    margin-left: 8.5rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.content {
+  display: flex;
+  .content_left {
+    flex: 1;
+  }
+
+  .content_right {
+    flex: 1;
+  }
 }
