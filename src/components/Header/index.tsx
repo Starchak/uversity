@@ -6,22 +6,28 @@ import { DesktopHeader } from './DesktopHeader';
 import { MobileHeader } from './MobileHeader';
 
 // Helpers
-import useWindowDimensions from '@helpers/useWindowDimensions';
-
-import styles from './index.module.scss';
+import useWindowSize from '@helpers/useWindowDimensions';
 
 type HeaderProps = {
   lng: string;
 };
 
 const Header: FC<HeaderProps> = ({ lng }) => {
-  const { width } = useWindowDimensions();
+  const { width } = useWindowSize();
 
-  return (
-    <>
-      {width <= 1125 ? <MobileHeader lng={lng} /> : <DesktopHeader lng={lng} />}
-    </>
-  );
+  if (width) {
+    return (
+      <>
+        {width <= 1125 ? (
+          <MobileHeader lng={lng} />
+        ) : (
+          <DesktopHeader lng={lng} />
+        )}
+      </>
+    );
+  } else {
+    return null;
+  }
 };
 
 export { Header };

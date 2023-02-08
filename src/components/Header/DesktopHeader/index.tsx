@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 // Components
 import { Button, MenuSelect } from '@styled';
+import { LngSelect } from '../LngSelect';
 
 // Translation
 import { useTranslation } from '@i18n/client';
@@ -25,12 +26,7 @@ const DesktopHeader: FC<DesktopHeaderProps> = ({ lng }) => {
   const { t } = useTranslation(lng, 'header');
 
   const [isBgWhite, setIsBgWhite] = useState(false);
-  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
-
-  const refLng = useOutsideClick(() => {
-    setIsLangMenuOpen(false);
-  });
 
   const refContacts = useOutsideClick(() => {
     setIsContactMenuOpen(false);
@@ -43,10 +39,6 @@ const DesktopHeader: FC<DesktopHeaderProps> = ({ lng }) => {
       );
     }
   }, []);
-
-  const toggleLangMenu = () => {
-    setIsLangMenuOpen(!isLangMenuOpen);
-  };
 
   const toggleContactMenu = () => {
     setIsContactMenuOpen(!isContactMenuOpen);
@@ -77,35 +69,7 @@ const DesktopHeader: FC<DesktopHeaderProps> = ({ lng }) => {
           </Link>
         </div>
         <div className={styles.nav_container}>
-          <div className={styles.nav_lang} ref={refLng}>
-            <span onClick={toggleLangMenu}>
-              <p>Укр</p>
-              <ArrowSVG
-                fill={isBgWhite ? '#111' : 'white'}
-                className={`${styles.arrow} ${
-                  isLangMenuOpen ? styles.arrow_open : ''
-                }`}
-              />
-            </span>
-            <MenuSelect className={styles.lang_select} isOpen={isLangMenuOpen}>
-              <div>
-                <Link
-                  href={`/ua`}
-                  className={`link ${lng === 'ua' ? 'link_active' : ''}`}
-                  onClick={toggleLangMenu}
-                >
-                  Українська
-                </Link>
-                <Link
-                  href={`/ru`}
-                  className={`link ${lng === 'ru' ? 'link_active' : ''}`}
-                  onClick={toggleLangMenu}
-                >
-                  Русский
-                </Link>
-              </div>
-            </MenuSelect>
-          </div>
+          <LngSelect lng={lng} isBgWhite={isBgWhite} />
           <nav>
             <ul>
               <li>

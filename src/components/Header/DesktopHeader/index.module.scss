@@ -65,7 +65,6 @@
   flex-direction: row;
 }
 
-.nav_lang,
 .nav_contact {
   flex: 1;
   display: flex;
@@ -127,23 +126,6 @@
 
   @media (max-width: 1525px) {
     font-size: 1.6rem;
-    line-height: normal;
-  }
-}
-
-.lang_select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2.5rem 4rem;
-  bottom: -11rem;
-  right: -6rem;
-  div {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 6rem;
   }
 }
 
