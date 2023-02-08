@@ -13,38 +13,42 @@ type WeOfferProps = {
   lng: string;
 };
 
-const programs = [
+const programs: Program[] = [
   {
     id: 1,
-    img: '',
+    img: 'post_1.png',
     title: 'post_1_title',
-    countries: ['ca', 'fr', 'gr'],
+    countries: ['ca', 'fr', 'de', 'it', 'us', 'au', 'cz'],
     description: 'post_1_description',
-    color: '#EF8220'
+    color: '#EF8220',
+    link: '/#'
   },
   {
     id: 2,
-    img: '',
+    img: 'post_2.png',
     title: 'post_2_title',
-    countries: ['ca', 'fr', 'gr'],
+    countries: ['ca', 'fr', 'de', 'it', 'us', 'au', 'cz'],
     description: 'post_2_description',
-    color: '#EF8220'
+    color: '#EF8220',
+    link: '/#'
   },
   {
     id: 3,
-    img: '',
+    img: 'post_3.png',
     title: 'post_3_title',
-    countries: ['ca', 'fr', 'gr'],
+    countries: ['ca', 'fr', 'de', 'it', 'us', 'au', 'cz'],
     description: 'post_3_description',
-    color: '#F7DC6D'
+    color: '#F7DC6D',
+    link: '/#'
   },
   {
     id: 4,
-    img: '',
+    img: 'post_4.png',
     title: 'post_4_title',
-    countries: ['ca', 'fr', 'gr'],
+    countries: ['ca', 'fr', 'de', 'it', 'us', 'au', 'cz'],
     description: 'post_4_description',
-    color: '#934C6A'
+    color: '#934C6A',
+    link: '/#'
   }
 ];
 

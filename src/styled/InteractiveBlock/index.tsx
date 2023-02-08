@@ -1,19 +1,16 @@
+'use client';
 import React, { FC } from 'react';
+import Link from 'next/link';
+import ReactCountryFlag from 'react-country-flag';
 import Image from 'next/image';
 
 // Translation
 import { useTranslation } from '@i18n/client';
 
-import styles from './index.module.scss';
+// SVG
+import FullArrowSVG from '../../../public/full_arrow.svg';
 
-type Program = {
-  id: number;
-  title: string;
-  description: string;
-  img: string;
-  countries: string[];
-  color: string;
-};
+import styles from './index.module.scss';
 
 type InteractiveBlockProps = {
   program: Program;
@@ -21,11 +18,17 @@ type InteractiveBlockProps = {
 };
 
 const InteractiveBlock: FC<InteractiveBlockProps> = ({ program, lng }) => {
+  const [hovered, setHovered] = React.useState(false);
+
   const { t } = useTranslation(lng, 'programs');
 
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
+      <div
+        className={`${styles.card} ${hovered ? styles.card_hovered : ''}`}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         <div className={styles.card_left}>
           <div
             className={styles.dot}
@@ -38,11 +41,30 @@ const InteractiveBlock: FC<InteractiveBlockProps> = ({ program, lng }) => {
         </div>
         <div className={styles.card_right}>
           <p className={styles.title}>{t(program.title)}</p>
-          <div className={styles.countries}></div>
+          <div className={styles.countries}>
+            {program.countries.map(countryCode => (
+              <ReactCountryFlag
+                countryCode={countryCode}
+                className={styles.countryFlag}
+                key={`${program.id}_${countryCode}`}
+              />
+            ))}
+          </div>
           <p className={styles.description}>{t(program.description)}</p>
+          <Link href={program.link} className={`link ${styles.details_link}`}>
+            {t('detailed_word')}
+            <FullArrowSVG fill="#111" className={styles.arrow_icon} />
+          </Link>
         </div>
       </div>
-      <div className={styles.img}></div>
+      <div className={styles.image_container}>
+        <Image
+          src={`/${program.img}`}
+          alt="post image"
+          fill={true}
+          className={styles.img}
+        />
+      </div>
     </div>
   );
 };

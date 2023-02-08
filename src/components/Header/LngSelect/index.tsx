@@ -34,7 +34,7 @@ const LngSelect: FC<LngSelectProps> = ({ lng, isBgWhite }) => {
       <span onClick={toggleLangMenu}>
         <p>{lng === 'ua' ? 'Укр' : 'Рус'}</p>
         <ArrowSVG
-          fill={isBgWhite ? '#111' : 'white'}
+          fill={isBgWhite ? '#111' : '#fff'}
           className={`${styles.arrow} ${
             isLangMenuOpen ? styles.arrow_open : ''
           }`}
