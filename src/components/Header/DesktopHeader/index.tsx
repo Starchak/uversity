@@ -14,7 +14,7 @@ import { useTranslation } from '@i18n/client';
 import useOutsideClick from '@helpers/useOutsideClick';
 
 // SVG
-import ArrowSVG from '../../../../public/arrow.svg';
+import ArrowSVG from '/public/arrow.svg';
 
 import styles from './index.module.scss';
 

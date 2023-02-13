@@ -45,7 +45,7 @@ const programs: Program[] = [
     id: 4,
     img: 'post_4.png',
     title: 'post_4_title',
-    countries: ['ca', 'fr', 'de', 'it', 'us', 'au', 'cz'],
+    countries: ['ua', 'ca', 'de'],
     description: 'post_4_description',
     color: '#934C6A',
     link: '/#'
