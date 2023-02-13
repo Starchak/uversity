@@ -35,6 +35,16 @@
 .right {
   flex: 1;
   border-left: 1px solid $line-color;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10% 0 5% 0;
+  .icon_wrap {
+    border: 1px solid $line-color;
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    cursor: pointer;
+  }
 }
 
 .middle_line {
