@@ -14,18 +14,14 @@ const WhyUs: FC<WhyUsProps> = ({ lng }) => {
   const { t } = useTranslation(lng, 'home');
 
   return (
-    <div className={styles.why_us}>
-      <div className={styles.title}>
-        <h2>Чому обирають Uversity?</h2>
-      </div>
-      <div className={styles.subtitle}>
-        <div> Ми допоможемо вступити у виші будь-якої країни світу, </div>
-        <div> Подамо на можливі стипендії та знижки,</div>
-        <div> Підберемо гранти та стипендії,</div>
-        <div> Знайдемо програми для студентів у віці 30+,</div>
-        <div> А 100% наших студентів отримують умовне зарахування!</div>
-      </div>
-    </div>
+    <section className={styles.why_us}>
+      <h2>{t('why_us_title')}</h2>
+      <p>
+        &#127758; {t('why_us_earth')} &#128203; {t('why_us_notepad')} ⚜️
+        {t('why_us_fr')} &#128116; {t('why_us_person')} <br /> &#127881;{' '}
+        {t('why_us_celebration')}
+      </p>
+    </section>
   );
 };
 
