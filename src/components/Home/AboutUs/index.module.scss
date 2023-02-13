@@ -3,80 +3,89 @@
 .container {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-
-  height: 90vh;
+  height: 84rem;
 }
 
-.grey_block {
-  position: relative;
-  flex: 1;
+.bg {
   display: flex;
+  height: 100%;
 
-  background-color: $light-grey;
-}
+  .bg_left {
+    flex: 1.5;
+    background: $light-grey;
+  }
 
-.white_block {
-  flex: 2;
-  display: flex;
+  .bg_right {
+    flex: 3;
+  }
 }
 
 .content {
-  display: flex;
-  height: 70%;
   position: absolute;
-  flex-direction: row;
-
-  width: 80%;
-  top: 50%;
+  display: flex;
   left: 50%;
+  top: 50%;
+  width: 77%;
+  height: 60rem;
   transform: translate(-50%, -50%);
-}
 
-.picture {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-  flex: 3;
-}
+  .img_container {
+    width: 51.8rem;
+    position: relative;
 
-.info_block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25rem;
-  height: 15rem;
-  color: $white;
-  bottom: -4rem;
-  left: -0.8rem;
-  position: absolute;
-  background-color: $orange;
-  padding: 1.5rem;
-}
+    .content_img {
+      object-fit: cover;
+      object-position: top;
+    }
 
-.text {
-  position: relative;
-  height: 100%;
-  flex: 4;
-}
+    .img_description {
+      background: $orange;
+      color: $white;
+      font-weight: 300;
+      width: 20rem;
+      padding: 4rem 4rem;
+      position: absolute;
+      bottom: -5rem;
+      left: -4rem;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+  }
 
-.title {
-  margin-top: 5rem;
-  left: -13rem;
-  position: relative;
-  width: 69rem;
-  height: 18rem;
-}
+  .text {
+    flex: 1;
+    margin-left: 10rem;
 
-//add to description class parameters that will centre content
+    h1 {
+      line-height: 8rem;
+    }
 
-.description {
-  display: flex;
-  position: relative;
-  width: 55rem;
-  height: 13rem;
+    p {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      font-weight: 300;
+      margin-top: 4rem;
+      margin-left: 6rem;
+      width: 50rem;
+    }
+
+    .button {
+      position: relative;
+      top: 4rem;
+      left: 6rem;
+
+      &:hover {
+        .arrow_icon {
+          margin-left: 2rem;
+        }
+      }
+    }
+
+    .arrow_icon {
+      position: relative;
+      top: 0.2rem;
+      margin-left: 1rem;
+      transition: all 0.2s linear;
+    }
+  }
 }

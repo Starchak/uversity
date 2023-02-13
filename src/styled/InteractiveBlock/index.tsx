@@ -7,7 +7,7 @@ import Image from 'next/image';
 // Translation
 import { useTranslation } from '@i18n/client';
 
-// SVG
+// Icons
 import FullArrowSVG from '/public/full_arrow.svg';
 
 import styles from './index.module.scss';
