@@ -1,6 +1,6 @@
 export const fallbackLng = 'ua';
 export const languages = [fallbackLng, 'ru'];
-export const defaultNS = 'translation';
+export const defaultNS = 'home';
 
 export const getOptions = (lng = fallbackLng, ns = defaultNS) => {
   return {
