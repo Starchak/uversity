@@ -1,0 +1,110 @@
+@import '@styles/variables';
+
+.container {
+  height: 40rem;
+  width: calc(100% - 3.5rem);
+  margin: 5rem 3.5rem 5rem 0;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  height: 80%;
+  width: 87.5%;
+  border: 1px solid $border-black;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.card_hovered {
+  z-index: 1;
+  background: $white;
+  border-color: $white;
+}
+
+.card_left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  .dot {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    margin-top: 3.6rem;
+  }
+
+  .program_number {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    position: absolute;
+    bottom: 6rem;
+    opacity: 0.5;
+    font-size: $small;
+    font-weight: 300;
+  }
+}
+
+.card_right {
+  flex: 6;
+  position: relative;
+
+  .title {
+    margin-top: 3.3rem;
+    font-weight: bold;
+  }
+
+  .countries {
+    margin-top: 3rem;
+  }
+
+  .countryFlag {
+    margin: 0 0.2rem;
+  }
+
+  .description {
+    font-size: $small;
+    font-weight: 300;
+    width: 80%;
+    margin-top: 1rem;
+    line-height: 2.6rem;
+  }
+}
+
+.image_container {
+  height: 80%;
+  width: 87.5%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  .img {
+    object-fit: cover;
+  }
+}
+
+.details_link {
+  position: absolute;
+  bottom: 3.3rem;
+  left: 0;
+  line-height: 3.5rem;
+  transition: all 0.2s linear;
+
+  &:hover {
+    border-color: rgba(239, 130, 32, 0.5);
+
+    .arrow_icon {
+      margin-left: 2rem;
+    }
+  }
+
+  .arrow_icon {
+    margin-left: 1rem;
+    position: relative;
+    top: 2px;
+    transition: all 0.2s linear;
+  }
+}

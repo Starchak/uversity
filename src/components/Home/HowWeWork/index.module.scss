@@ -1,0 +1,47 @@
+@import '@styles/variables';
+
+.how_we_work {
+  background: none;
+  position: relative;
+}
+
+.bg {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+
+  div:first-child {
+    flex: 1;
+    background: $light-grey;
+  }
+
+  div:last-child {
+    flex: 3;
+    background: $white;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+  flex-direction: column;
+
+  h1 {
+    width: 25rem;
+    font-size: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .steps {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(100% - 27.08%);
+    margin: 0 13.54%;
+  }
+}

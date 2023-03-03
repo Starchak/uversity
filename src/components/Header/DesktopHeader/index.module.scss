@@ -1,0 +1,172 @@
+@import '@styles/variables';
+
+.header {
+  display: flex;
+  height: 9.7rem;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  color: $white;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+
+  .nav_link {
+    color: $white;
+
+    @media (max-width: 1430px) {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+.header_white {
+  background: $white;
+  color: $black;
+
+  .header_content {
+    border-bottom: 0.3rem solid $orange;
+  }
+
+  .nav_link {
+    color: $black;
+  }
+}
+
+.header_content {
+  border-bottom: 0.3rem solid $white;
+  width: 100%;
+  display: flex;
+
+  nav {
+    flex: 6;
+    width: 100%;
+    display: flex;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        @media (max-width: 1430px) {
+          line-height: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.nav_container {
+  flex: 7;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_contact {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  p {
+    margin-right: 0.6rem;
+  }
+
+  span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.3rem solid transparent;
+    position: relative;
+    top: 0.3rem;
+
+    @media (max-width: 1430px) {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    &:hover {
+      border-bottom-color: $orange;
+    }
+  }
+}
+
+.nav_contact {
+  flex: 2;
+}
+
+.logo_container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 0.1rem solid $line-color;
+}
+
+.btn_container {
+  flex: 1;
+  position: relative;
+}
+
+.button {
+  height: 100%;
+  width: 100%;
+  color: $white;
+  border-bottom: 0.3rem solid $orange;
+  border-left: 1px solid $orange;
+  position: absolute;
+  left: -1px;
+
+  @media (max-width: 1525px) {
+    font-size: 1.6rem;
+  }
+}
+
+.contacts_select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24rem;
+  height: 24rem;
+  bottom: -24rem;
+  right: 2rem;
+}
+
+.arrow {
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.arrow_open {
+  transform: rotate(180deg);
+  fill: $orange;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  color: rgba($color: $black, $alpha: 0.5);
+  line-height: 2rem;
+}
+
+.contact_title {
+  line-height: 3.5rem;
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contact_btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}

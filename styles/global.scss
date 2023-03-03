@@ -1,0 +1,126 @@
+@import 'variables';
+
+/* Set up rem units */
+html {
+  font-size: 62.5%;
+}
+
+// Fonts
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../public/fonts/Gilroy-Regular.ttf');
+  src: url('../public/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../public/fonts/Gilroy-Light.ttf');
+  src: url('../public/fonts/Gilroy-Light.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../public/fonts/Gilroy-Regular.ttf');
+  src: url('../public/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../public/fonts/Gilroy-Medium.ttf');
+  src: url('../public/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../public/fonts/Gilroy-Thin.ttf');
+  src: url('../public/fonts/Gilroy-Thin.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YesevaOne';
+  src: url('../public/fonts/YesevaOne-Regular.ttf');
+  src: url('../public/fonts/YesevaOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Apply rules
+div,
+span,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+q,
+s,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+footer,
+header,
+nav {
+  font-family: 'Gilroy', sans-serif;
+  font-size: $regular;
+}
+
+h1 {
+  font-family: 'YesevaOne', serif;
+  font-size: $headline;
+}
+
+h2 {
+  font-family: 'YesevaOne', serif;
+  font-size: $large;
+}
+
+.link {
+  text-decoration: none;
+  color: $black;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid $orange;
+  }
+}
+
+.link_active {
+  border-bottom: 2px solid $orange;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
