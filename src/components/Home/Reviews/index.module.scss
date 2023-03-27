@@ -1,5 +1,43 @@
 @import '@styles/variables';
 
 .reviews {
-  background: none;
+  background: $light-grey;
+  height: 66rem;
+  padding: 6rem 13.54% 18rem 13.54%;
+
+  h1 {
+    margin-bottom: 3rem;
+  }
+}
+
+.slider_nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .svg_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .left_arrow,
+  .right_right {
+    transform: rotate(90deg) scale(2.5);
+  }
+
+  .right_right {
+    transform: rotate(-90deg) scale(2.5);
+  }
+
+  .arrow_divider {
+    width: 1px;
+    height: 4rem;
+    margin: 0 3rem;
+    background: rgba(17, 17, 17, 0.15);
+  }
 }

@@ -19,6 +19,14 @@ declare global {
     duration: string;
     color: string;
   };
+
+  type Review = {
+    id: string;
+    name: string;
+    university: string;
+    text: string;
+    img: string;
+  };
 }
 
 export default undefined;
