@@ -7,9 +7,9 @@ import Image from 'next/image';
 import { useTranslation } from '@i18n/client';
 
 // Icons
-import InstagramIcon from '/public/instagram_icon.svg';
-import FacebookIcon from '/public/fb_icon.svg';
-import YouTubeIcon from '/public/youtube_icon.svg';
+import InstagramIcon from '@public/instagram_icon.svg';
+import FacebookIcon from '@public/fb_icon.svg';
+import YouTubeIcon from '@public/youtube_icon.svg';
 
 import styles from './index.module.scss';
 
