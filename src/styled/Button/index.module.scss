@@ -2,12 +2,14 @@
 
 .button {
   background: $orange;
+  color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 2.3rem 5.1rem;
 
   &:hover {
     background: $dark-orange;

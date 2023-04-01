@@ -115,14 +115,14 @@
   position: relative;
 }
 
-.button {
+.button.button {
   height: 100%;
   width: 100%;
-  color: $white;
   border-bottom: 0.3rem solid $orange;
   border-left: 1px solid $orange;
   position: absolute;
   left: -1px;
+  padding: 0;
 
   @media (max-width: 1525px) {
     font-size: 1.6rem;

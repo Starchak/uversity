@@ -1,0 +1,27 @@
+@import '@styles/variables';
+
+.chip {
+  background-color: $light-grey;
+  color: #000;
+  font-size: $small;
+  line-height: 2;
+  margin-right: 0.5rem;
+  padding: 0.8rem 2.1rem;
+  border-radius: 6rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border-color: $orange;
+  }
+}
+
+.active {
+  background-color: $orange;
+  color: $white;
+}
