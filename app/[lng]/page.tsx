@@ -26,11 +26,11 @@ const Home = async ({ params: { lng } }: HomeProps) => {
         <Slider lng={lng} />
         <AboutUs lng={lng} />
         <WeOffer lng={lng} />
-        <WhyUs lng={lng} />
+        {/* <WhyUs lng={lng} />
         <EachStudent lng={lng} />
         <HowWeWork lng={lng} />
         <Reviews lng={lng} />
-        <ContactUs lng={lng} />
+        <ContactUs lng={lng} /> */}
       </Suspense>
     </div>
   );

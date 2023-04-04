@@ -3,7 +3,7 @@
 .slider {
   display: flex;
   width: 100%;
-  height: 90rem;
+  height: 90vh;
   position: relative;
 }
 
@@ -61,4 +61,31 @@
   color: $white;
   width: 85%;
   margin: 12rem;
+}
+
+@media (max-width: 1125px) {
+  .middle_line {
+    height: calc(100% - 5.4rem);
+    top: 5.4rem;
+  }
+
+  .left {
+    position: relative;
+    height: calc(100% - 5.4rem);
+    top: 5.4rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .icon_wrap {
+    display: none;
+  }
+
+  .title {
+    margin: 0;
+    margin-bottom: 4rem;
+    margin-left: 1rem;
+    font-size: 6rem;
+    line-height: 1.5;
+  }
 }

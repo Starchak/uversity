@@ -26,13 +26,6 @@ const AboutUs: FC<AboutUsProps> = ({ lng }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.img_container}>
-          <Image
-            src="/about_us.png"
-            alt="about us img"
-            width={518}
-            height={600}
-            className={styles.content_img}
-          />
           <div className={styles.img_description}>
             {t('about_us_img_description')}
           </div>

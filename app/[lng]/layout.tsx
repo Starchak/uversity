@@ -29,7 +29,7 @@ const RootLayout = async ({ children, params: { lng } }: RootLayoutProps) => {
       <body>
         <Header lng={lng} />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

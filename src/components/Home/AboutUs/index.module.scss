@@ -3,11 +3,15 @@
 .container {
   position: relative;
   width: 100%;
-  height: 84rem;
+  padding: 12rem 0;
 }
 
 .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
+  width: 100%;
   height: 100%;
 
   .bg_left {
@@ -21,22 +25,18 @@
 }
 
 .content {
-  position: absolute;
+  position: relative;
   display: flex;
-  left: 50%;
-  top: 50%;
   width: 77%;
   height: 60rem;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
 
   .img_container {
-    width: 51.8rem;
+    width: 40%;
     position: relative;
-
-    .content_img {
-      object-fit: cover;
-      object-position: top;
-    }
+    background: url('../../../../public/about_us.png');
+    background-size: cover;
+    background-position: top;
 
     .img_description {
       background: $orange;
@@ -54,19 +54,20 @@
 
   .text {
     flex: 1;
-    margin-left: 10rem;
+    padding-left: 10rem;
+    width: 60%;
 
     h1 {
-      line-height: 8rem;
+      font-size: 6rem;
+      line-height: 1.2;
     }
 
     p {
       font-size: 1.6rem;
       line-height: 2.6rem;
-      font-weight: 300;
+      font-weight: 400;
       margin-top: 4rem;
       margin-left: 6rem;
-      width: 50rem;
     }
 
     .button {
@@ -86,6 +87,56 @@
       top: 0.2rem;
       margin-left: 1rem;
       transition: all 0.2s linear;
+    }
+  }
+}
+
+@media (max-width: 1125px) {
+  .content {
+    width: 90%;
+
+    .img_container {
+      width: 50%;
+    }
+
+    .text {
+      padding-left: 5rem;
+      width: 50%;
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        margin-left: 0;
+      }
+
+      .button {
+        left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .content {
+    flex-direction: column;
+    height: auto;
+
+    .img_container {
+      width: 100%;
+      height: 60rem;
+      margin-bottom: 8rem;
+
+      .img_description {
+        left: -2rem;
+        bottom: -3rem;
+      }
+    }
+
+    .text {
+      width: 100%;
+      padding-left: 0;
     }
   }
 }

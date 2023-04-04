@@ -22,3 +22,31 @@
     flex: 1;
   }
 }
+
+@media (max-width: 1400px) {
+  .we_offer {
+    padding: 6rem 10%;
+  }
+}
+
+@media (max-width: 1125px) {
+  .we_offer {
+    padding: 6rem 5%;
+
+    .title {
+      margin: 0;
+      font-size: 6rem;
+    }
+  }
+  .content {
+    flex-direction: column;
+
+    .content_left {
+      margin-top: 0;
+    }
+
+    .content_right > *:first-child {
+      margin-top: 0;
+    }
+  }
+}

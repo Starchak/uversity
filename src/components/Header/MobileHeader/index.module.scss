@@ -26,9 +26,9 @@
   align-items: center;
 }
 
-.button {
+.button.button {
   flex: 2;
   height: 100%;
-  color: $white;
+  padding: 0;
   font-size: 1.6rem;
 }
