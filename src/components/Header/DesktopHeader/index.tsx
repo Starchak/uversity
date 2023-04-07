@@ -79,7 +79,10 @@ const DesktopHeader: FC<DesktopHeaderProps> = ({ lng }) => {
                 </Link>
               </li>
               <li>
-                <Link href={`${lng}/#`} className={`link ${styles.nav_link}`}>
+                <Link
+                  href={`${lng}/about-us`}
+                  className={`link ${styles.nav_link}`}
+                >
                   {t('menu_item_2')}
                 </Link>
               </li>

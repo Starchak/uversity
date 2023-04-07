@@ -20,3 +20,16 @@
     line-height: 6rem;
   }
 }
+
+@media (max-width: 840px) {
+  .why_us {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 4rem;
+    }
+  }
+}

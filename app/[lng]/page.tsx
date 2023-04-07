@@ -11,26 +11,22 @@ import {
   WhyUs
 } from '@components/Home';
 
-import { useTranslation } from '@i18n';
-
 type HomeProps = {
   params: Params;
 };
 
 const Home = async ({ params: { lng } }: HomeProps) => {
-  const { t } = await useTranslation(lng, 'header');
-
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <Slider lng={lng} />
         <AboutUs lng={lng} />
         <WeOffer lng={lng} />
-        {/* <WhyUs lng={lng} />
+        <WhyUs lng={lng} />
         <EachStudent lng={lng} />
-        <HowWeWork lng={lng} />
-        <Reviews lng={lng} />
-        <ContactUs lng={lng} /> */}
+        <HowWeWork lng={lng} /> {/*TODO: Mobile Adaptation */}
+        <Reviews lng={lng} /> {/*TODO: Mobile Adaptation */}
+        <ContactUs lng={lng} /> {/*TODO: Mobile Adaptation */}
       </Suspense>
     </div>
   );
